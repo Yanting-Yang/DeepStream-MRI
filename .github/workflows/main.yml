@@ -33,11 +33,6 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
       # Runs a set of commands using the runners shell
-      - name: Run
-        run: |
-          ls -a
-
-      # Runs a set of commands using the runners shell
       - name: Run build script
         run: ./.github/scripts/deploy_to_aws.sh
         shell: bash
