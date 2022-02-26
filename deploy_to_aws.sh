@@ -1,3 +1,8 @@
 #!/bin/bash
-ssh yangyanting@18.188.192.202
+echo 'Starting to Deploy...'
+
+ssh yangyanting@18.188.192.202 "
     ls -a
+    "
+
+echo 'Deployment completed successfully'
