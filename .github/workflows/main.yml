@@ -36,4 +36,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           ssh yangyanting@18.188.192.202
+          cd ~
           pwd
