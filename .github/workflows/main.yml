@@ -37,4 +37,4 @@ jobs:
         run: |
           ssh yangyanting@18.188.192.202
           cd ~
-          pwd
+          ls
