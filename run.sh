@@ -1,8 +1,5 @@
 #!/bin/bash
 source .venv/bin/activate;
-export FLASK_APP=flaskr;
-export FLASK_RUN_PORT=5000;
-export FLASK_RUN_HOST=0.0.0.0;
 
 case "$1" in
     "debug")
@@ -10,6 +7,7 @@ case "$1" in
         flask run;;
     "deploy")
         export FLASK_ENV=production;
+        export FLASK_RUN_HOST=0.0.0.0;
         nohup flask run >./logs/$(date "+%Y-%m-%d").log 2>&1 &;;
     "kill")
         str=$(netstat -tunlp 2>/dev/null);

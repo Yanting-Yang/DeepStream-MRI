@@ -14,9 +14,9 @@ Github Action. Automatic Deployment.
 
 ## 2022-02-26
 
-1. Setup Github Action
+1. Setup Github Action.
 
-    Set `KNOWN_HOSTS` and `SSH_KEY` in the repository-settings-Secrets-New repository secret
+    Set `KNOWN_HOSTS` and `SSH_KEY` in the repository-settings-Secrets-New repository secret.
 
     Get `KNOWN_HOSTS`:
 
@@ -29,3 +29,19 @@ Github Action. Automatic Deployment.
     ```shell
     chmod 764 deploy_to_aws.sh 
     ```
+
+2. Change directory name to app.
+
+    `flask run` automatically detects an app (`app` or `application`) or factory (`create_app` or `make_app`)[^2]. Therefore FLASK_APP environment does not need to be used.
+
+    Application structure becomes:
+
+    ```shell
+    DeepStream-MRI
+    └── app
+        └── __init__.py (contains create_app)
+    ```
+
+    [^2]: [Application Discovery](https://flask.palletsprojects.com/en/2.0.x/cli/#application-discovery)
+
+3. Rewrite `__init__.py`.
