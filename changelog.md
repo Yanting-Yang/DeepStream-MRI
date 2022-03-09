@@ -45,3 +45,11 @@ Github Action. Automatic Deployment.
     [^2]: [Application Discovery](https://flask.palletsprojects.com/en/2.0.x/cli/#application-discovery)
 
 3. Rewrite `__init__.py`.
+
+## 2022-03-08
+
+1. Edit index.html
+
+    Use dark theme. Add tools pannel.
+
+    Use list group and collapse to show tool items.
