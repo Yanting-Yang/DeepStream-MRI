@@ -53,3 +53,8 @@ Github Action. Automatic Deployment.
     Use dark theme. Add tools pannel.
 
     Use list group and collapse to show tool items.
+
+## 2022-03-10
+
+1. Rewrite templates using jinja2 template inheritance and include function.
+1. Edit index.html and publication.html
