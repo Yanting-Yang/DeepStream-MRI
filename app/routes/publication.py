@@ -1,7 +1,7 @@
-from . import routes
+from .route import Route
 from flask import render_template
 
-@routes.route('/publication')
-def publication():
+@Route.route('/publication')
+def Publication():
     return render_template('publication.html')
 

@@ -1,7 +1,7 @@
-from . import routes
+from .route import Route
 from flask import render_template
 
-@routes.route('/')
-def hello():
+@Route.route('/')
+def Index():
     return render_template('index.html')
 

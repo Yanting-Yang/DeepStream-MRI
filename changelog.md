@@ -48,7 +48,7 @@ Github Action. Automatic Deployment.
 
 ## 2022-03-08
 
-1. Edit index.html
+1. Edit `index.html`:
 
     Use dark theme. Add tools pannel.
 
@@ -57,4 +57,10 @@ Github Action. Automatic Deployment.
 ## 2022-03-10
 
 1. Rewrite templates using jinja2 template inheritance and include function.
-1. Edit index.html and publication.html
+1. Edit `index.html` and `publication.html`.
+
+## 2022-03-13
+
+1. Rewirte the structure of app module so that the coding is more standard.
+1. Generate a new favicon using [favicon.io](favicon.io).
+1. Edit `base.html`.
