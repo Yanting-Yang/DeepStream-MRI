@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block main %}
+<div class="py-3 mx-md-3 bg-light border-radius-2">
+  <h1 class="display-4 fw-normal border-bottom-dash text-center">Team</h1>
+
+  <div class="py-3 px-md-3">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Degree</th>
+            <th scope="col">Role</th>
+            <th scope="col">Contribution</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="#yanting" class="text-reset text-decoration-none">Yanting Yang</a></th>
+            <td>B.S.</td>
+            <td>Web Engineer</td>
+            <td>Web design</td>
+            <td>yy3189@columbia.edu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="position-relative">
+  <a class="position-absolute" id="yanting" style="top: -8px"></a>
+</div>
+<div class="py-3 mx-md-3 my-5 bg-light border-radius-2">
+  <div class="row py-3 px-md-3">
+    <div class="col-3 border-end d-flex align-items-center">
+      <img src="{{ url_for('static', filename='YantingYang.png') }}" class="img-fluid rounded-pill" alt="Yanting Yang" />
+    </div>
+    <div class="col-9">
+      <span class="lead fw-bold">Yanting Yang, B.S.</span><br />
+      <span class="">Department of Biomedical Engineering, Columbia University</span>
+      <ol class="list-group list-group-numbered my-3">
+        <li class="list-group-item d-flex">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Projects</div>
+            DeepStream-MRI.com Web design.
+          </div>
+        </li>
+        <li class="list-group-item d-flex">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Research Interest</div>
+            Deep learning in MRI image denoise and segmentation.
+          </div>
+        </li>
+        <li class="list-group-item d-flex">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Linkedin</div>
+            <a href="https://www.linkedin.com/in/yanting-yang-6b1516218">https://www.linkedin.com/in/yanting-yang-6b1516218</a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from .route import Route
 from .index import Index
 from .publication import Publication
-
-__all__ = ["Index", "Publication", "Route"]
+from .team import Team
+__all__ = ["Index", "Publication", "Route", "Team"]
