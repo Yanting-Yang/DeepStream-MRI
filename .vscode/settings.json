@@ -2,5 +2,8 @@
     "[Html]": {
         //"editor.defaultFormatter": "vscode.html-language-features"
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-      }
+    },
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
