@@ -1,4 +1,17 @@
-{% extends "base.html" %} {% block main %}
+{% extends "base.html" %} {% block head %} {{ super() }}
+<style type="text/css">
+  .list-group-flush > .list-group-item:last-child {
+    border-bottom-width: 1px !important;
+  }
+  .hiden-link {
+    z-index: 4;
+    --bs-text-opacity: 0;
+  }
+  .hiden-link:hover {
+    --bs-text-opacity: 1 !important;
+  }
+</style>
+{% endblock %} {% block main %}
 <div class="my-5 text-center text-light">
   <h1 class="display-1 fw-normal">DeepStream-MRI</h1>
   <div class="container col-lg-8">
@@ -21,7 +34,7 @@
       <h3 class="border-bottom-dash ps-3 ps-md-0">Mouse brain MRI</h3>
       <div class="list-group list-group-flush">
         <div class="position-relative">
-          <a href="#" class="text-primary position-absolute px-3 py-2" style="z-index: 4; --bs-text-opacity: 0">Structure MRI</a>
+          <a href="#" class="text-dark position-absolute px-3 py-2 hiden-link">Structure MRI</a>
         </div>
         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sMRI" role="button" aria-expanded="false" aria-controls="sMRI">
           Structure MRI
@@ -36,7 +49,7 @@
           <a href="#" class="list-group-item list-group-item-action">Between-subject Diffeomorphic Registration</a>
         </div>
         <div class="position-relative">
-          <a href="#" class="text-primary position-absolute px-3 py-2" style="z-index: 4; --bs-text-opacity: 0">CBV fMRI</a>
+          <a href="#" class="text-dark position-absolute px-3 py-2 hiden-link">CBV fMRI</a>
         </div>
         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#fMRI" role="button" aria-expanded="false" aria-controls="fMRI">
           CBV fMRI
@@ -59,7 +72,7 @@
       <h3 class="border-bottom-dash ps-3 ps-md-0">Human brain MRI</h3>
       <div class="list-group list-group-flush">
         <div class="position-relative">
-          <a href="#" class="text-primary position-absolute px-3 py-2" style="z-index: 4; --bs-text-opacity: 0">Structure MRI</a>
+          <a href="#" class="text-dark position-absolute px-3 py-2 hiden-link">Structure MRI</a>
         </div>
         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sMRIhuman" role="button" aria-expanded="false" aria-controls="sMRIhuman">
           Structure MRI
@@ -72,7 +85,7 @@
           <a href="#" class="list-group-item list-group-item-action">Between-subject Diffeomorphic Registration</a>
         </div>
         <div class="position-relative">
-          <a href="#" class="text-primary position-absolute px-3 py-2" style="z-index: 4; --bs-text-opacity: 0">AI-CBV mapping from T1-weighted MRI</a>
+          <a href="#" class="text-dark position-absolute px-3 py-2 hiden-link">AI-CBV mapping from T1-weighted MRI</a>
         </div>
         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#CBVhuman" role="button" aria-expanded="false" aria-controls="CBVhuman">
           AI-CBV mapping from T1-weighted MRI
@@ -93,7 +106,7 @@
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action">JET v1.0</a>
         <div class="position-relative">
-          <a href="#" class="text-primary position-absolute px-3 py-2" style="z-index: 4; --bs-text-opacity: 0">JET v2.0</a>
+          <a href="#" class="text-dark position-absolute px-3 py-2 hiden-link">JET v2.0</a>
         </div>
         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#JETv2mouse" role="button" aria-expanded="false" aria-controls="JETv2mouse">
           JET v2.0
@@ -110,7 +123,7 @@
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action">JET v1.0</a>
         <div class="position-relative">
-          <a href="#" class="text-primary position-absolute px-3 py-2" style="z-index: 4; --bs-text-opacity: 0">JET v2.0</a>
+          <a href="#" class="text-dark position-absolute px-3 py-2 hiden-link">JET v2.0</a>
         </div>
         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#JETv2human" role="button" aria-expanded="false" aria-controls="JETv2human">
           JET v2.0
