@@ -11,7 +11,7 @@
 <div class="position-relative">
   <a class="position-absolute" id="tools" style="top: -56px"></a>
 </div>
-<div class="py-3 mx-md-3 bg-light border-radius-2">
+<div class="py-3 mx-md-3 bg-light border-radius-2" id="myGroup">
   <h1 class="display-4 fw-normal border-bottom-dash text-center">Tools</h1>
 
   <!--Automated processing streamline-->
@@ -27,7 +27,7 @@
           Structure MRI
           <span class="badge bg-primary rounded-pill">6</span>
         </a>
-        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="sMRI">
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="sMRI" data-bs-parent="#myGroup">
           <a href="#" class="list-group-item list-group-item-action">K-space convertor</a>
           <a href="#" class="list-group-item list-group-item-action">Motion detection and correction</a>
           <a href="#" class="list-group-item list-group-item-action">Within-subject Rigid Registration</a>
@@ -42,7 +42,7 @@
           CBV fMRI
           <span class="badge bg-primary rounded-pill">7</span>
         </a>
-        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="fMRI">
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="fMRI" data-bs-parent="#myGroup">
           <a href="#" class="list-group-item list-group-item-action">K-space convertor</a>
           <a href="#" class="list-group-item list-group-item-action">Motion detection and correction</a>
           <a href="#" class="list-group-item list-group-item-action">Within-subject Rigid Registration</a>
@@ -65,7 +65,7 @@
           Structure MRI
           <span class="badge bg-primary rounded-pill">4</span>
         </a>
-        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="sMRIhuman">
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="sMRIhuman" data-bs-parent="#myGroup">
           <a href="#" class="list-group-item list-group-item-action">QC</a>
           <a href="#" class="list-group-item list-group-item-action">SRR</a>
           <a href="#" class="list-group-item list-group-item-action">TABS - Bias field correction, BET and PVE</a>
@@ -78,7 +78,7 @@
           AI-CBV mapping from T1-weighted MRI
           <span class="badge bg-primary rounded-pill">5</span>
         </a>
-        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="CBVhuman">
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="CBVhuman" data-bs-parent="#myGroup">
           <a href="#" class="list-group-item list-group-item-action">QC</a>
           <a href="#" class="list-group-item list-group-item-action">SRR</a>
           <a href="#" class="list-group-item list-group-item-action">TABS - Bias field correction, BET and PVE</a>
@@ -99,7 +99,7 @@
           JET v2.0
           <span class="badge bg-primary rounded-pill">2</span>
         </a>
-        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="JETv2mouse">
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="JETv2mouse" data-bs-parent="#myGroup">
           <a href="#" class="list-group-item list-group-item-action">MRS registration</a>
           <a href="#" class="list-group-item list-group-item-action">MRS fitting</a>
         </div>
@@ -116,7 +116,7 @@
           JET v2.0
           <span class="badge bg-primary rounded-pill">2</span>
         </a>
-        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="JETv2human">
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="JETv2human" data-bs-parent="#myGroup">
           <a href="#" class="list-group-item list-group-item-action">MRS registration</a>
           <a href="#" class="list-group-item list-group-item-action">MRS fitting</a>
         </div>

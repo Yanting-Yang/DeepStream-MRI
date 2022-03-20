@@ -1,8 +1,17 @@
+@import "bootstrap.min.css";
 .border-bottom-dash {
-    border-bottom: 1px dashed #000000;
-    padding-bottom: .5rem;
+  border-bottom: 1px dashed #000000;
+  padding-bottom: 0.5rem;
 }
-
 .border-radius-2 {
-    border-radius: 2rem;
+  border-radius: 2rem;
+}
+.list-group-item {
+  background-color: inherit !important;
+}
+.list-group-item-action:hover {
+  background-color: #ffffff !important;
+}
+.list-group-flush > .list-group-item:last-child {
+  border-bottom-width: 1px !important;
 }
