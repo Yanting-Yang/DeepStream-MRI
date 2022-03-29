@@ -1,4 +1,4 @@
-from .app import App
-from .errors import page_not_found
+import imp
+from .app import app
 
-__all__ = ["App", "page_not_found"]
+__all__ = ['app']

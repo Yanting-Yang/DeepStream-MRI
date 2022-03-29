@@ -1,6 +1,6 @@
-from .route import Route
+from .blueprint import root
 from flask import render_template
 
-@Route.route('/team')
-def Team():
+@root.route('/team')
+def team():
     return render_template('team.html')

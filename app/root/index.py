@@ -1,7 +1,7 @@
-from .route import Route
+from .blueprint import root
 from flask import render_template
 
-@Route.route('/')
-def Index():
+@root.route('/')
+def index():
     return render_template('index.html')
 
