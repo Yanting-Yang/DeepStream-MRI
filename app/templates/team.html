@@ -15,83 +15,15 @@
           </tr>
         </thead>
         <tbody>
+          {% for key, value in data.items() %}
           <tr>
-            <th scope="row"><a href="#anish" class="text-reset text-decoration-none">Anish</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>Group-Level Image Registration</td>
-            <td>ap4168@columbia.edu</td>
+            <th scope="row"><a href="#{{ value['Name'].split()[0].lower() }}" class="text-reset text-decoration-none">{{ value['Name'] }}</a></th>
+            <td>{{ value['Degree'] }}</td>
+            <td>{{ value['Role'] }}</td>
+            <td>{{ value['Contribution'] }}</td>
+            <td>{{ value['Email'] }}</td>
           </tr>
-          <tr>
-            <th scope="row"><a href="#chen" class="text-reset text-decoration-none">Chen Liu</a></th>
-            <td>M.S.</td>
-            <td>Alumnus</td>
-            <td></td>
-            <td>cl3760@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#daivd" class="text-reset text-decoration-none">David Ma</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>1. JETv1.0<br />2. JETv2.0</td>
-            <td>ap4168@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#george" class="text-reset text-decoration-none">George Kenefati</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>MDD Prediction from sMRI</td>
-            <td>georgekenefati98@gmail.com</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#natalia" class="text-reset text-decoration-none">Natalia Harguindeguy</a></th>
-            <td>M.S.</td>
-            <td></td>
-            <td></td>
-            <td>nh2708@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#vish" class="text-reset text-decoration-none">Vish Rao</a></th>
-            <td></td>
-            <td>Developer</td>
-            <td>TABS - Bias field correction, BET and PVE</td>
-            <td>vmr2132@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#xuemin" class="text-reset text-decoration-none">Xuemin Zhu</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>Predicting brain age with MRI using deep learning</td>
-            <td>xueminzhu1211@gmail.com</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#yanting" class="text-reset text-decoration-none">Yanting Yang</a></th>
-            <td>M.S.</td>
-            <td>Web Engineer</td>
-            <td>Web design</td>
-            <td>yy3189@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#ye" class="text-reset text-decoration-none">Ye Tian</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>MRS_DL_LCM</td>
-            <td>yt2793@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#ye" class="text-reset text-decoration-none">Zhuoyao</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>Motion Correction of MRI</td>
-            <td>zx2369@columbia.edu</td>
-          </tr>
-          <tr>
-            <th scope="row"><a href="#ye" class="text-reset text-decoration-none">Haojin Wu</a></th>
-            <td>M.S.</td>
-            <td>Developer</td>
-            <td>VBA analysis</td>
-            <td>hw2846@columbia.edu</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
@@ -147,7 +79,7 @@
     </div>
     <div class="row py-3 px-md-3 mx-0 mb-3 bg-light border-radius-2">
       <div class="col-6 col-md-3 d-flex align-items-center">
-        <img src="{{ url_for('static', filename='team_img/george.jpeg') }}" class="img-fluid rounded-pill" alt="George Kenefati" />
+        <img src="{{ url_for('static', filename='members image/George Kenefati.jpeg') }}" class="img-fluid rounded-pill" alt="George Kenefati" />
       </div>
       <div class="col-md-9">
         <div class="ps-3 pt-3 ps-md-0 pt-md-0">
@@ -184,7 +116,7 @@
     </div>
     <div class="row py-3 px-md-3 mx-0 mb-3 bg-light border-radius-2">
       <div class="col-6 col-md-3 d-flex align-items-center">
-        <img src="{{ url_for('static', filename='team_img/natalia.png') }}" class="img-fluid rounded-pill" alt="Natalia Harguindeguy" />
+        <img src="{{ url_for('static', filename='members image/Natalia Harguindeguy.png') }}" class="img-fluid rounded-pill" alt="Natalia Harguindeguy" />
       </div>
       <div class="col-md-9">
         <div class="ps-3 pt-3 ps-md-0 pt-md-0">
@@ -265,7 +197,7 @@
     </div>
     <div class="row py-3 px-md-3 mx-0 mb-3 bg-light border-radius-2">
       <div class="col-6 col-md-3 d-flex align-items-center">
-        <img src="{{ url_for('static', filename='team_img/xuemin.webp') }}" class="img-fluid rounded-pill" alt="Xuemin Zhu" />
+        <img src="{{ url_for('static', filename='members image/Xuemin Zhu.webp') }}" class="img-fluid rounded-pill" alt="Xuemin Zhu" />
       </div>
       <div class="col-md-9">
         <div class="ps-3 pt-3 ps-md-0 pt-md-0">
@@ -309,7 +241,7 @@
     </div>
     <div class="row py-3 px-md-3 mx-0 mb-3 bg-light border-radius-2">
       <div class="col-6 col-md-3 d-flex align-items-center">
-        <img src="{{ url_for('static', filename='team_img/yanting.png') }}" class="img-fluid rounded-pill" alt="Yanting Yang" />
+        <img src="{{ url_for('static', filename='members image/Yanting Yang.png') }}" class="img-fluid rounded-pill" alt="Yanting Yang" />
       </div>
       <div class="col-md-9">
         <div class="ps-3 pt-3 ps-md-0 pt-md-0">
@@ -346,7 +278,7 @@
     </div>
     <div class="row py-3 px-md-3 mx-0 mb-3 bg-light border-radius-2">
       <div class="col-6 col-md-3 d-flex align-items-center">
-        <img src="{{ url_for('static', filename='team_img/ye.jpg') }}" class="img-fluid rounded-pill" alt="Ye Tian" />
+        <img src="{{ url_for('static', filename='members image/Ye Tian.jpg') }}" class="img-fluid rounded-pill" alt="Ye Tian" />
       </div>
       <div class="col-md-9">
         <div class="ps-3 pt-3 ps-md-0 pt-md-0">
