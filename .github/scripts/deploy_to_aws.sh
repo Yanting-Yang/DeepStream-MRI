@@ -7,6 +7,7 @@ ssh yangyanting@18.188.192.202 "
     git fetch
     git reset --hard HEAD
     git merge origin/main
+    bash run.sh init
     bash run.sh deploy
     "
 
