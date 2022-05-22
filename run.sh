@@ -8,7 +8,8 @@ case "$1" in
     "deploy")
         export FLASK_ENV=production;
         export FLASK_RUN_HOST=0.0.0.0;
-        nohup flask run >./logs/$(date "+%Y-%m-%d").log 2>&1 &;;
+        flask run;;
+        #nohup flask run >./logs/$(date "+%Y-%m-%d").log 2>&1 &;;
     "kill")
         str=$(netstat -tunlp 2>/dev/null);
         pid=$(echo "$str"|grep ":5000"|grep -Po '[0-9]+(?=\/python)');
