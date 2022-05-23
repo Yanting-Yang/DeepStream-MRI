@@ -1,10 +1,6 @@
-name: ci
+name: docker-build-push
 
 on:
-  #push:
-  #branches:
-  #- "main"
-
   workflow_dispatch:
 
 jobs:
@@ -23,5 +19,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: .
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: yangyanting/deepstream-mri:latest
