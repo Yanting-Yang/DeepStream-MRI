@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  docker:
+  ssh-pull-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: multiple command
