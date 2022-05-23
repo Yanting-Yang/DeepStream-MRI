@@ -2,7 +2,7 @@ name: main
 on:
   push:
     tags:
-      - "*"
+      - "v*.*.*"
 
 jobs:
   docker-build-push:
