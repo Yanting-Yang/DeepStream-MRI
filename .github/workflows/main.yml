@@ -25,7 +25,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: yangyanting/deepstream-mri:latest
+          tags: yangyanting/deepstream-mri:latest, yangyanting/deepstream-mri:${GITHUB_REF_NAME}
   ssh-pull-deploy:
     needs: docker-build-push
     runs-on: ubuntu-latest
