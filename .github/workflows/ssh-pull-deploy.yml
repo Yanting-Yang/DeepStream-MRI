@@ -3,16 +3,15 @@ name: ssh-pull-deploy
 on:
   workflow_dispatch:
 
-env:
-  app: "deepstream-mri"
-  username: "yangyanting"
-
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: multiple command
         uses: appleboy/ssh-action@master
+        env:
+          app: "deepstream-mri"
+          username: "yangyanting"
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
