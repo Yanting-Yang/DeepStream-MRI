@@ -1,0 +1,13 @@
+name: test
+
+on:
+  push:
+    tags:
+      - "*/*"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: multiple command
+        run: echo ${GITHUB_REF_NAME}
