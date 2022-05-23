@@ -19,13 +19,16 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set some variables for the image
+        run: echo "IMAGE_VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_ENV
+      - name: Build and push the image
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: yangyanting/deepstream-mri:latest, yangyanting/deepstream-mri:${GITHUB_REF_NAME}
+          tags: yangyanting/deepstream-mri:latest, yangyanting/deepstream-mri:${{ env.IMAGE_VERSION }}
   ssh-pull-deploy:
     needs: docker-build-push
     runs-on: ubuntu-latest
