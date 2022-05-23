@@ -1,9 +1,10 @@
 name: test
 
 on:
-  push:
-    tags:
-      - "*"
+  workflow_dispatch:
+  #push:
+  #tags:
+  #- "*"
 
 jobs:
   test:
