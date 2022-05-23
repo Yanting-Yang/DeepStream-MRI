@@ -1,8 +1,8 @@
 name: main
 on:
   push:
-    branches:
-      - "main"
+    tags:
+      - "*"
 
 jobs:
   docker-build-push:
@@ -27,6 +27,7 @@ jobs:
           push: true
           tags: yangyanting/deepstream-mri:latest
   ssh-pull-deploy:
+    needs: docker-build-push
     runs-on: ubuntu-latest
     steps:
       - name: multiple command
